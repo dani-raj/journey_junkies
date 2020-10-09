@@ -214,8 +214,6 @@ nav{
 
 
 
-
-
 /* About */
 
 #about{
@@ -224,7 +222,6 @@ nav{
 }
 
 .about-cards{
-    /* width: 100%; */
     box-shadow: var(--shadow);
     padding: 3rem 6rem;
     border-radius: 8px;
@@ -268,7 +265,7 @@ nav{
 }
 
 
-/* IIMAGE GALLERY */
+/* Image Gallery */
 
 #gallery{
     width: 100%;
@@ -355,13 +352,6 @@ nav{
     margin-top: 15rem;
 }
 
-/* .tours-title{
-    font-size: 4.2rem;
-    margin-bottom: 8rem;
-    color: var(--secondary-color);
-    text-align: center;
-} */
-
 .tours-boxes{
     display: flex;
     justify-content: space-around;
@@ -370,7 +360,6 @@ nav{
 
 .tour{
     width: 37rem;
-    /* height: auto; */
     color: var(--main-color);
     text-align: center;
     border-radius: 1rem;
@@ -787,9 +776,6 @@ nav{
     }
     .tours-boxes{
         flex-direction: column;
-    }
-    .title{
-        /* ide közös kevesebb */
     }
     #testimonials{
         height: 100vh;
