@@ -87,8 +87,8 @@ header{
 }
 
 header .nav-logo,
-.nav-item,
-.nav-item:before{
+.nav-link,
+.nav-link:before{
     transition: all .3s;
 }
 
@@ -108,11 +108,11 @@ nav{
     align-items: center;
 }
 
-.nav-links{
+.nav-items{
     display: flex;
 }
 
-.nav-item{
+.nav-link{
     margin: .8rem 2rem;
     font-size: 1.8rem;
     color: var(--main-color);
@@ -121,7 +121,7 @@ nav{
     opacity: .9;
 }
 
-.nav-item:before{
+.nav-link:before{
     content: '';
     position: absolute;
     bottom: -.3rem;
@@ -133,12 +133,12 @@ nav{
     transform-origin: left;
 }
 
-.nav-item:hover{
+.nav-link:hover{
     opacity: 1;
     font-weight: 500;
 }
 
-.nav-item:hover::before{
+.nav-link:hover::before{
     transform: scaleX(1);
 }
 
@@ -193,7 +193,7 @@ nav{
 
 .subheadline{
     font-size: 2.2rem;
-    width: 60rem;
+    width: 50%;
     font-weight: 300;
     opacity: .9;
     margin: 1.4rem auto;
@@ -235,7 +235,7 @@ nav{
 }
 
 .about-text-box{
-    max-width: 55rem;
+    max-width: 50%;
     padding: 1rem 3rem;
 }
 
@@ -354,12 +354,12 @@ nav{
 
 .tours-boxes{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .tour{
-    width: 37rem;
+    flex: 0 0 calc(33.33333% - 4rem);
     color: var(--main-color);
     text-align: center;
     border-radius: 1rem;
@@ -368,7 +368,6 @@ nav{
     transition: all .3s;
     position: relative;
     overflow: hidden;
-    margin: 2rem;
 }
 
 .tour::after{
@@ -557,7 +556,7 @@ nav{
 }
 
 .contact-form{
-    width: 50rem;
+    width: 50%;
     margin: 10rem auto;
     box-shadow: var(--shadow);
     padding: 3rem 4rem;
@@ -565,7 +564,7 @@ nav{
     border-radius: 8px;
 }
 
-.contact-form>*{
+.contact-form > *{
     width: 100%;
     outline: none;
     margin-bottom: 5rem;
@@ -672,7 +671,7 @@ nav{
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     nav{
         justify-content: center;
     }
@@ -695,7 +694,7 @@ nav{
         z-index: 1000;
         display: inline-block;
     }
-    .nav-links{
+    .nav-items{
         list-style: none;
         position: fixed;
         top: 0;
@@ -737,7 +736,7 @@ nav{
         display: none;
     }
     
-    .open .nav-links{
+    .open .nav-items{
         transform: translateX(0);
     }
     
@@ -772,6 +771,7 @@ nav{
         padding: 0;
     }
     .tour{
+        flex-basis: 100%;
         margin: 3rem auto;
     }
     .tours-boxes{
@@ -784,7 +784,7 @@ nav{
         font-size: 3.7rem;
     }
     .contact-form{
-        width: 40rem;
+        width: 80%;
     }
     .contact-form select{
         text-indent: 9.5rem;

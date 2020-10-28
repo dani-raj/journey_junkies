@@ -1,14 +1,22 @@
-let menuToggler = document.querySelector('.menu-toggle');
-let navLink = document.querySelector('.nav-links');
-let body = document.querySelector('body');
+const menuToggler = document.querySelector('.menu-toggle');
+const navItems = document.querySelectorAll('.nav-item');
 
+function removeOpenClassFromBody() {
+    document.body.classList.remove('open');
+}
 
-menuToggler.addEventListener('click', function(){
-    body.classList.toggle('open');
-})
+window.addEventListener('resize', () => {
+    if (document.body.classList.contains('open')) {
+        removeOpenClassFromBody();
+    }
+});
 
+menuToggler.addEventListener('click', () => {
+    document.body.classList.toggle('open');
+});
 
-navLink.addEventListener('click', function(){
-    body.classList.toggle('open');
-})
-
+navItems.forEach(navItem => {
+    navItem.addEventListener('click', () => {
+        removeOpenClassFromBody();
+    });
+});
